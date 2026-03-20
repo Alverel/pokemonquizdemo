@@ -1,5 +1,8 @@
 FROM node:20-alpine
 
+# OpenSSL requis par Prisma sur Alpine
+RUN apk add --no-cache openssl
+
 WORKDIR /app
 
 # Copier les fichiers de dépendances
