@@ -1,0 +1,52 @@
+Tu es chargé de créer un projet complet déployable sur Railway.  
+Objectif : Un site web “Quel Pokémon es-tu ?” basé sur la PokéAPI et les 151 premiers Pokémon.
+
+🎯 Fonctionnel attendu :
+- L'utilisateur entre un pseudo en début de parcours.
+- Un quiz de 8 à 12 questions "de personnalité", cohérentes :
+    - Ex : “Plutôt nature ?”, “Sport ?”, “Aimes-tu la chaleur ?”
+- Chaque réponse oriente le type Pokémon (plante, feu, eau, combat…)
+- Le filtrage doit progressivement réduire le pool jusqu’à trouver 1 Pokémon.
+- Il doit exister au minimum 151 combinaisons différentes.
+- À la fin : afficher “Tu es <nom pokemon> !” + sprite officiel.
+- Enregistrer en BDD (pseudo + pokemon).
+- Une page /leaderboard liste tous les résultats utilisateurs.
+
+📦 Stack technique :
+- Backend : Node.js + Express
+- Frontend : React + Vite ou Next.js (au choix)
+- DB : PostgreSQL
+- ORM : Prisma
+- Déploiement Railway (prépare les fichiers nécessaires : Dockerfile, env, scripts)
+
+🌐 API : https://pokeapi.co
+
+🛠️ Ce que je veux que tu génères :
+1. L’arborescence complète du projet (front + back)
+2. Tous les fichiers nécessaires (backend, frontend, prisma, config)
+3. Un système de quiz cohérent :
+    - Set de questions
+    - Pondération pour chaque type Pokémon
+4. Le code backend :
+    - Endpoint /quiz/result pour calculer le Pokémon
+    - Endpoint /save pour enregistrer pseudo + résultat
+    - Endpoint /leaderboard
+5. Le code frontend :
+    - Page accueil
+    - Page quiz
+    - Page résultat
+    - Page leaderboard
+6. Scripts pour développement et build
+7. Dockerfile + instructions Railway
+
+🚀 Contraintes :
+- Code propre, structuré, commenté
+- Résultats garantissant 151 chemins différents minimum
+- Utilise prisma migrate pour initialiser la DB
+- Stocker dans .env : DATABASE_URL + BASE_URL_API_POKEMON
+- Pas d’authentification, juste pseudo libre
+
+📝 Livrables :
+- Tous les fichiers du projet
+- Préparer une commande d’installation pas à pas
+- Préparer un README complet pour GitHub
