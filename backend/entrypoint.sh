@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+echo "→ Pushing Prisma schema..."
+npx prisma db push --accept-data-loss
+
+echo "→ Starting server..."
+exec node src/index.js

@@ -12,9 +12,11 @@ COPY prisma ./prisma/
 # Installer toutes les dépendances (prisma CLI est en devDep, requis pour db push)
 RUN npm ci
 
-# Copier le code source
+# Copier le code source et le script de démarrage
 COPY src ./src
+COPY entrypoint.sh ./
+RUN chmod +x entrypoint.sh
 
 EXPOSE 3001
 
-CMD ["sh", "-c", "npx prisma db push --accept-data-loss && node src/index.js"]
+CMD ["./entrypoint.sh"]
