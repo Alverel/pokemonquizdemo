@@ -8,7 +8,11 @@
       "Bash(npm run:*)",
       "Bash(railway up:*)",
       "Bash(railway add:*)",
-      "Bash(railway link:*)"
+      "Bash(railway link:*)",
+      "Bash(railway redeploy:*)",
+      "Bash(railway logs:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
