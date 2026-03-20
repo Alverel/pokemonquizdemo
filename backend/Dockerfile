@@ -9,8 +9,8 @@ WORKDIR /app
 COPY package*.json ./
 COPY prisma ./prisma/
 
-# Installer les dépendances (inclut prisma generate via postinstall)
-RUN npm ci --only=production
+# Installer toutes les dépendances (prisma CLI est en devDep, requis pour db push)
+RUN npm ci
 
 # Copier le code source
 COPY src ./src
