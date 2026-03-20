@@ -1,4 +1,8 @@
-const BASE = '/api';
+// En dev : proxy Vite → localhost:3001
+// En production Railway : VITE_API_URL pointe vers le service backend
+const BASE = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : '/api';
 
 export async function fetchQuestions() {
   const res = await fetch(`${BASE}/quiz/questions`);
